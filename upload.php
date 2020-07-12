@@ -1,5 +1,5 @@
 <?php
-$newfile = $_FILES['userfile']['name'].date('m-d-Y_H:i:s');
+// $newfile = $_FILES['userfile']['name'].date('m-d-Y_H:i:s');
 if (isset($_FILES['userfile'])){
   // pre_r($_FILES);
 
@@ -21,6 +21,8 @@ if (isset($_FILES['userfile'])){
   $file_ext = end($file_ext);
   // Check the ext of the uploaded file
   // pre_r($file_ext);
+  $failure = '<div class="alert alert-danger" role="alert">Invalid file type. Please submit only jpg, jpeg, png or gifs. Thanks!</div>';
+  $success = '<div class="alert alert-success role="alert"">Success! Image had been uploaded</div>';
 
   if (!in_array($file_ext, $extensions)) {
     $ext_error = true;
@@ -28,17 +30,18 @@ if (isset($_FILES['userfile'])){
 
 // If the error of the upload is not equal to 0
   if ($_FILES['userfile']['error']){
-    echo $phpFileUploadErrors[$_FILES['userfile']['error']];
-  } elseif ($ext_error) {
-    echo '<strong>Invalid file type.</strong> Please submit only jpg, jpeg, png or gifs. Thanks!';
-  } else {
-    echo '<strong>Success!</strong> Image had been uploaded';
-  }
+     $phpFileUploadErrors[$_FILES['userfile']['error']];
 
+  } elseif ($ext_error) {
+      echo $failure;
+
+  } else {
+      echo $success;
+  }
 
   move_uploaded_file($_FILES['userfile']['tmp_name'], 'images/'.
   // Changes file name
-      $newfile);
+      $_FILES['userfile']['name'].date('m-d-Y_H:i:s'));
 };
 
 // Format Response
