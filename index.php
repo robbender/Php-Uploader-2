@@ -70,14 +70,15 @@
         <div class="mt-5">
           <h3>Submit Your File</h3>
           <div class="">
-            <form class="" action="" method="POST" enctype="multipart/form-data">
+            <form class="" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
               <!-- <label for="">File Upload</label> -->
               <input id="" type="file" name="userfile" value="">
               <!-- <input type="submit" name="submit" value="Upload"> -->
               <span class="input-group-btn">
-                <button class="btn btn-warning btn-reset" type="reset">Reset</button>
-
-                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                <input class="btn btn-warning" type="submit" value="Reset" />
+                <!-- <button class="btn btn-warning btn-reset" type="reset" value="Clear">Reset</button> -->
+                <input class="btn btn-primary btn-primary" name="submit" type="submit" value="Submit" />
+                <!-- <button type="submit" name="submit" class="btn btn-primary">Submit</button> -->
               </span>
               <!-- <img id="blah" src="#" alt="your image" /> -->
               <div id="image-holder"></div>
