@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="row align-items-center mt-5"">
+    <div class="row align-items-center mt-5">
       <!-- <div class="col"> -->
       <div class="">
         <h3 class=" mt-1">Submit Your File</h3>
