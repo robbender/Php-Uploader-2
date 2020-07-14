@@ -67,6 +67,8 @@
         $_FILES['userfile']['name'].date('m-d-Y_H:i:s'));
   };
 
+    // $imagePreview = $_FILES['userfile']['name'].date('m-d-Y_H:i:s');
+
   // Format Response
   function pre_r($array){
     echo '<pre>';
@@ -86,13 +88,19 @@
               <input id="" type="file" name="userfile" value="">
               <!-- <input type="submit" name="submit" value="Upload"> -->
               <span class="input-group-btn">
-                <input class="btn btn-warning" type="submit" value="Reset" />
+                <input class="btn btn-warning" type="reset" value="Reset" />
                 <!-- <button class="btn btn-warning btn-reset" type="reset" value="Clear">Reset</button> -->
                 <input class="btn btn-primary btn-primary" name="submit" type="submit" value="Submit" />
                 <!-- <button type="submit" name="submit" class="btn btn-primary">Submit</button> -->
               </span>
               <!-- <img id="blah" src="#" alt="your image" /> -->
-              <div id="image-holder"></div>
+              <div class="">
+                  <h5>PREVIEW</h5><br /><img src="<?php echo $imagePreview;?>" width="100" height="100" />
+              </div>
+
+
+
+              <!-- <div id="image-holder"></div> -->
             </form>
           </div>
         </div>
