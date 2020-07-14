@@ -11,47 +11,44 @@
   <link rel="stylesheet" href="styles.css">
   <title>File Uploader</title>
 </head>
-
 <body>
-
-
   <div class="container">
     <div class="row align-items-center mt-5"">
-      <div class="col ">
+      <!-- <div class="col"> -->
       <div class="">
-        <h3 class="mt-1">Submit Your File</h3>
-        <div class="mt-4">
-          <form class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
-            <div class="custom-file">
-              <div class="form-group mt-4">
-                <!-- <label class="custom-file-label" for="customFile">Choose file</label> -->
-                <!-- <input class="form-control-file" id="" type="file" name="userfile" value=""> -->
-                <!-- <input class="custom-file-label" id="validatedCustomFile" type="file" name="userfile" value=""> -->
-                <input type="file" class="custom-file-input" id="validatedCustomFile" name="userfile" required>
-                <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-                  <div class="valid-feedback">
-                      Looks good!
-                  </div>
-                  <div class="invalid-feedback">Please Choose a File
-                  </div>
-                </div>
+        <h3 class=" mt-1">Submit Your File</h3>
+      <div class="mt-4">
+        <form class="form" action="form.php" method="POST" enctype="multipart/form-data">
+          <div class="custom-file">
+            <div class="form-group mt-4">
+              <!-- <label class="custom-file-label" for="customFile">Choose file</label> -->
+              <!-- <input class="form-control-file" id="" type="file" name="userfile" value=""> -->
+              <!-- <input class="custom-file-label" id="validatedCustomFile" type="file" name="userfile" value=""> -->
+              <input type="file" class="custom-file-input" id="validatedCustomFile" name="userfile" required>
+              <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">Please Choose a File
+              </div>
             </div>
-        </div>
-        <span class="input-group-btn">
-          <input class="btn btn-warning" type="reset" value="Reset" />
-          <!-- <button class="btn btn-warning btn-reset" type="reset" value="Clear">Clear</button> -->
-          <a class="btn btn-secondary" href="#" role="button">Back</a>
-          <input class="btn btn-primary btn-primary" name="submit" type="submit" value="Submit" />
-        </span>
-        <!-- <img id="blah" src="#" alt="your image" /> -->
-        <br>
-        <!-- <div class="">
+          </div>
+      </div>
+      <span class="input-group-btn">
+        <input class="btn btn-warning" type="reset" value="Reset" />
+        <!-- <button class="btn btn-warning btn-reset" type="reset" value="Clear">Clear</button> -->
+        <a class="btn btn-secondary" href="#" role="button">Back</a>
+        <input class="btn btn-primary btn-primary" name="submit" type="submit" value="Submit" />
+      </span>
+      <!-- <img id="blah" src="#" alt="your image" /> -->
+      <br>
+      <!-- <div class="">
                   <h5>PREVIEW</h5><br /><img src="<?php echo $imagePreview;?>" width="100" height="100" />
               </div> -->
-        <!-- <div id="image-holder"></div> -->
-        </form>
-      </div>
+      <!-- <div id="image-holder"></div> -->
+      </form>
     </div>
+  </div>
   </div>
   </div>
 
